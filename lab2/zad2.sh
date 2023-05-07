@@ -14,14 +14,13 @@ fi
 for FILE in $(find "$DIRECTORY1" -mindepth 1 -depth)
 do
     if [[ -f ${FILE} ]]; then 
-        echo "to plik regulany"
+        echo "to plik regularny"
     elif [[ -d ${FILE} ]]; then 
         echo "to katalog"
+    elif [[ -L ${FILE} ]]; then 
+        echo "to dowiazanie symboliczne"
     fi
 
-    if [[ -f ${FILE} ]]; then 
-        echo " to dowiazanie symboliczne"
-    fi
 
     ln -s ${FILE} $DIRECTORY2
 done
