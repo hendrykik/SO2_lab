@@ -133,7 +133,7 @@ done
 
 FILE_4_SAVING_RESULTS=${FILE_4_SAVING_RESULTS:-"result.txt"}
 
-MOVIES_DIR="/Users/janzemlo/Desktop/SO_L/SO2/Bash4/marvel"
+MOVIES_DIR="/Users/janzemlo/Desktop/SO_L/lab4/marvel"
 
 MOVIES_LIST=$(get_movies_list "${MOVIES_DIR}")
 
