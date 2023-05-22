@@ -54,7 +54,7 @@ def ai_move(board):
                 return board
             
     if isSpaceFree(board, 5):
-        makeMove(board, "O", 5)
+        makeMove(board, "O", 4)
         print("Ai choose " + str(5))
         return board
     

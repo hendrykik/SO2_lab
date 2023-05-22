@@ -31,4 +31,9 @@ def is_game_over(board):
 def new_board():
     return [' ' for _ in range(9)]
 
-#def announce_outcome(board, players_move):
+def announce_outcome(board, players_move):
+    print_board(board)
+    if(players_move == False):
+        print("Wygrales")
+    else:
+        print("Przegrales")
