@@ -5,7 +5,7 @@ from studentA import is_game_over
 
 def get_user_move(board):
     start_time = time.time()
-    choice = input("Koniec czasu")
+    choice = input("Your turn! Give number from 1 to 9: ")
     choice = int(choice)
     while True:
         elapsed_time = time.time() - start_time
