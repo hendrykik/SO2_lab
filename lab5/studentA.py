@@ -18,7 +18,16 @@ def is_game_over(board):
     if (board[2] != " " and board[2] == board[4] and board[4] == board[6]):
         return True
 
+    x = 0
+    for i in range(9):
+        if ( board[i] != " "):
+            x = x + 1
+        
+    if (x == 0): return True
+
     return False
 
 def new_board():
     return [" " for _ in range(9)]
+
+#def announce_outcome(board, players_move):
