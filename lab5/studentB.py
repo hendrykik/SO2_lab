@@ -1,10 +1,18 @@
 import random
+import time
+import sys
 from studentA import is_game_over
 
 def get_user_move(board):
-    choice = input("Your turn! Give number from 1 to 9: ")
+    start_time = time.time()
+    choice = input("Koniec czasu")
     choice = int(choice)
     while True:
+        elapsed_time = time.time() - start_time
+        if elapsed_time > 5:
+            print("Time's up! Game over.")
+            sys.exit()
+
         if board[choice - 1] == ' ':
             makeMove(board, 'X', choice - 1)
             return board
